@@ -1,19 +1,22 @@
 import React from 'react'
-
+import Link from 'next/link';
 interface MovieListProps {
     title: string;
     poster : string;
+    id : any;
 }
 
-const MovieList = ({title , poster} : MovieListProps) => {
+const MovieList = ({title , poster, id} : MovieListProps) => {
 
-    const fullImageUrl = `${process.env.NEXT_PUBLIC_API_IMG_URL}${poster}`;
-
-
+    const fullImageUrl = `${process.env.NEXT_PUBLIC_API_IMG_URL}${poster}`
   return (
-    <div className='grid grid-cols-3 gap-2 mb-4 p-4 border rounded'>
-        <img src={fullImageUrl}/>
-        <h3>{title}</h3>
+    <div className=' gap-2 mb-4 p-4 justify-center items-center'>
+      <div className='items-center justify-center text-center mt-6'>
+        <Link href={`/${id}`}>
+        <img src={fullImageUrl} width={350} height={350} className='cursor-pointer'/>
+        <h1 className='mt-4'>{title}</h1>
+        </Link>
+      </div>
     </div>
   )
 }
