@@ -1,30 +1,32 @@
 'use client'
 import React, { useRef } from 'react'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
+import { MagnifyingGlassIcon } from '@phosphor-icons/react'
 
 const InputSearch = () => {
-      // const searchRef = useRef<HTMLInputElement>(null)
-      // const router = useRouter()
+      const searchRef = useRef<HTMLInputElement>(null)
+      const router = useRouter()
 
-      // const handleSearch = (event: React.FormEvent) => {
-      //   event.preventDefault()
-      //   const keyword = searchRef.current?.value
-      //   if (keyword) {
-      //     router.push(``)
-      //   }
-      // }
+      const handleSearch = (event: React.FormEvent) => {
+        event.preventDefault()
+        const keyword = searchRef.current?.value
+        if (keyword) {
+          router.push(`/search/${keyword}`)
+        }
+      }
 
   return (
-      <form className='bg-white border-none rounded-xl'>
+      <form className='relative bg-white border-none rounded-xl'>
       <input
-      // ref={searchRef}
+      ref={searchRef}
       type='text'
-      className='w-full py-3 pl-12 pr-16 bg-transparent text-black placeholder-gray-500 rounded-2xl outline-none focus:placeholder-gray-400 transition-all duration-300'
+      className=' text-black placeholder-gray-500 rounded-xl outline-none focus:placeholder-black'
       placeholder='Search Movie ... ' />
       <button 
+      onClick={handleSearch}
       type="submit"
-      className='absolute right-2 top-1/2 transform -translate-y-1/2 p-2 rounded-xl transition-all duration-300'
-      >       
+      className='absolute-1 end-1 cursor-pointer'
+      ><MagnifyingGlassIcon/>
       </button>
     </form>
   )

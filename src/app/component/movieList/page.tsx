@@ -20,9 +20,8 @@ const MovieList = ({api} : MovieListProps) => {
         height={350} 
         className='cursor-pointer'
         />
-        
-        <h1 className='mt-4'>{movie.title} </h1>
         </Link>
+        <h1 className='mt-4'>{movie.title} </h1>
       </div>
     </div>
       )
