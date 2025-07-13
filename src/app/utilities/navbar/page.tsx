@@ -10,11 +10,13 @@ return (
             <div className='relative z-10 container mx-auto px-4'>
                 <div className='flex md:flex-row flex-col justify-between items-center py-4'>
                     <Link href="/" className='group flex items-center space-x-2 mb-4 md:mb-0'>
-                        <div className='text-white font-bold text-2xl group-hover:text-red-600 transition-all'>
+                        <div className='text-white font-bold text-2xl group-hover:text-amber-600 transition-all'>
                             70NGHUB
-                         <InputSearch/>
                         </div>
                     </Link>
+                    <div>
+                        <InputSearch/>
+                    </div>
                 </div>
             </div>
         </header>
