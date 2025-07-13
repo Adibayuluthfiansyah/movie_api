@@ -11,7 +11,7 @@ export default async function Home() {
     // popular movie
     <div>
       <section>
-      <Header title={"Most Popular"} linkTitle={"See All"} linkHref={"/populer"}/>
+      <Header title={"Most Popular"} linkTitle={"See All"} linkHref={"/popular"}/>
       <MovieList api= {topMovie}/>
       </section>
     </div>

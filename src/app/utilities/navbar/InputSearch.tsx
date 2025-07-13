@@ -1,3 +1,4 @@
+'use client'
 import React, { useRef } from 'react'
 import { useRouter } from 'next/router'
 
@@ -23,8 +24,7 @@ const InputSearch = () => {
       <button 
       type="submit"
       className='absolute right-2 top-1/2 transform -translate-y-1/2 p-2 rounded-xl transition-all duration-300'
-      >
-        
+      >       
       </button>
     </form>
   )

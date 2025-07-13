@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link';
 interface MovieListProps {
@@ -5,8 +7,9 @@ interface MovieListProps {
 }
 
 const MovieList = ({api} : MovieListProps) => {
+  console.log({api})
   return (
-    <div className="grid grid-cols-4 p-2">      
+    <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 p-2">      
     {api.results?.map ((movie:any) => {
       return (
       <div key={movie.id} className=' gap-2 mb-4 p-4 justify-center items-center'>
@@ -17,14 +20,13 @@ const MovieList = ({api} : MovieListProps) => {
         height={350} 
         className='cursor-pointer'
         />
-        <h1 className='mt-4'>{movie.title}</h1>
+        
+        <h1 className='mt-4'>{movie.title} </h1>
         </Link>
       </div>
     </div>
       )
     })}
-
-
     </div>
   )
 }
