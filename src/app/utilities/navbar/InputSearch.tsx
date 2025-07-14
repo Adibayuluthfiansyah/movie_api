@@ -11,25 +11,30 @@ const InputSearch = () => {
       const handleSearch = (event: React.FormEvent) => {
         event.preventDefault()
         const keyword = searchRef.current?.value
-        if (keyword) {
+        if(keyword) {
           router.push(`/search/${keyword}`)
         }
       }
 
   return (
-      <form className='relative bg-white border-none rounded-xl'>
+
+    <form className='relative bg-white border-none rounded-xl '>
       <input
       ref={searchRef}
-      type='text'
-      className=' text-black placeholder-gray-500 rounded-xl outline-none focus:placeholder-black '
-      placeholder='Search Movie ... ' />
+      placeholder='Search Movie ... '
+      className='w-full p-2' />
+
+
       <button 
       onClick={handleSearch}
       type="submit"
-      className='absolute-1 end-1 cursor-pointer'>
-      <MagnifyingGlassIcon/>
+      className='absolute top-2 end-2 cursor-pointer'>
+      <MagnifyingGlassIcon size={24}/>
       </button>
+
     </form>
+
+
   )
 }
 

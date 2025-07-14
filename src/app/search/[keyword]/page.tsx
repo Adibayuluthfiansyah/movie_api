@@ -1,5 +1,5 @@
 import React from 'react'
-import MovieList from '../component/movieList/page'
+import MovieList from '../../component/movieList/page'
 interface SearchPageProps {
     params : {
         keyword : string
@@ -8,18 +8,9 @@ interface SearchPageProps {
 
 const Page =  async ({params}:SearchPageProps) => {
     const {keyword} = await params
-    const decodedKeyword = decodeURIComponent(keyword)
-    
-    console.log('Searching for:', decodedKeyword)
-    
+    const decodedKeyword = decodeURIComponent(keyword) 
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_SEARCH_URL}?api_key=${process.env.NEXT_PUBLIC_API_KEY}&query=${decodedKeyword}`,
-      {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }
+    `${process.env.NEXT_PUBLIC_API_SEARCH_URL}?api_key=${process.env.NEXT_PUBLIC_API_KEY}&query=${decodedKeyword}`
     )
     const searchMovie = await response.json()
   return (
