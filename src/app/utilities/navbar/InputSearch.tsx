@@ -1,5 +1,6 @@
 'use client'
-import React, { useRef } from 'react'
+
+import { useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { MagnifyingGlassIcon } from '@phosphor-icons/react'
 
@@ -20,13 +21,13 @@ const InputSearch = () => {
       <input
       ref={searchRef}
       type='text'
-      className=' text-black placeholder-gray-500 rounded-xl outline-none focus:placeholder-black'
+      className=' text-black placeholder-gray-500 rounded-xl outline-none focus:placeholder-black '
       placeholder='Search Movie ... ' />
       <button 
       onClick={handleSearch}
       type="submit"
-      className='absolute-1 end-1 cursor-pointer'
-      ><MagnifyingGlassIcon/>
+      className='absolute-1 end-1 cursor-pointer'>
+      <MagnifyingGlassIcon/>
       </button>
     </form>
   )
