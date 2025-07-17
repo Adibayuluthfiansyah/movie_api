@@ -55,44 +55,13 @@ const Navbar = () => {
           {/* Search and User Actions */}
           <div className="flex items-center space-x-4">
             <InputSearch/>
-            {/* Search */}
-            {/* <form onSubmit={handleSearch} className="relative hidden sm:block">
-              <input
-                type="text"
-                placeholder="Search movies..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="bg-black/50 text-white placeholder-gray-400 border border-gray-600 rounded-md px-4 py-2 pr-10 w-64 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
-              />
-              <button
-                type="submit"
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
-              >
-                <Search size={18} />
-              </button>
-            </form> */}
 
             {/* Mobile search icon */}
             <button className="sm:hidden text-white hover:text-gray-300">
               <Search size={20} />
             </button>
 
-            {/* User Profile */}
-            <div className="relative group">
-              <button className="flex items-center space-x-2 text-white hover:text-gray-300">
-                <User size={20} />
-                <span className="hidden sm:inline">Profile</span>
-              </button>
-              
-              {/* Dropdown Menu */}
-              <div className="absolute right-0 mt-2 w-48 bg-black/90 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="py-1">
-                  <a href="/profile" className="block px-4 py-2 text-sm text-white hover:bg-gray-800">Profile</a>
-                  <a href="/settings" className="block px-4 py-2 text-sm text-white hover:bg-gray-800">Settings</a>
-                  <a href="/logout" className="block px-4 py-2 text-sm text-white hover:bg-gray-800">Sign out</a>
-                </div>
-              </div>
-            </div>
+
 
             {/* Mobile Menu Button */}
             <button
