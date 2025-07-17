@@ -17,23 +17,20 @@ const InputSearch = () => {
       }
 
   return (
-
-    <form className='relative bg-white border-none rounded-xl '>
+    <div>
+      <form className="relative hidden sm:block">
       <input
       ref={searchRef}
       placeholder='Search Movie ... '
       className='w-full p-2' />
-
-
       <button 
       onClick={handleSearch}
       type="submit"
       className='absolute top-2 end-2 cursor-pointer'>
       <MagnifyingGlassIcon size={24}/>
       </button>
-
     </form>
-
+    </div>
 
   )
 }

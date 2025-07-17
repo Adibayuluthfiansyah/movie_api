@@ -14,7 +14,7 @@ const Page =  async ({params}:SearchPageProps) => {
     )
     const searchMovie = await response.json()
   return (
-        <div className='justify-center items-center p-4'>
+        <div className='justify-center items-center p-4 mt-12'>
         <h1 className='p-4 justify-center text-center text-2xl font-bold'>Searching for {decodedKeyword}</h1>
         <MovieList api={searchMovie}/>
     </div>
