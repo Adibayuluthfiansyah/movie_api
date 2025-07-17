@@ -8,7 +8,7 @@ import InputSearch from './InputSearch';
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,12 +19,6 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      window.location.href = `/search/${encodeURIComponent(searchQuery)}`;
-    }
-  };
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${

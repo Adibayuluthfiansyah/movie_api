@@ -22,12 +22,12 @@ const InputSearch = () => {
       <input
       ref={searchRef}
       placeholder='Search Movie ... '
-      className='w-full p-2' />
+      className="bg-black/50 text-white placeholder-gray-400 border border-gray-600 rounded-md px-4 py-2 pr-10 w-64 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"/>
       <button 
       onClick={handleSearch}
       type="submit"
-      className='absolute top-2 end-2 cursor-pointer'>
-      <MagnifyingGlassIcon size={24}/>
+      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white cursor-pointer">
+      <MagnifyingGlassIcon size={18}/>
       </button>
     </form>
     </div>
