@@ -2,11 +2,11 @@
 
 import React from 'react'
 import Link from 'next/link';
-interface MovieListProps {
+interface UpComingListProps {
   api : any;
 }
 
-const MovieList = ({api} : MovieListProps) => {
+const UpComingList = ({api} : UpComingListProps) => {
 
   console.log({api})
   return (
@@ -31,4 +31,4 @@ const MovieList = ({api} : MovieListProps) => {
   )
 }
 
-export default MovieList
+export default UpComingList

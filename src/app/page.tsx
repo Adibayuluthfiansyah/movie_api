@@ -1,10 +1,13 @@
 import Header from "./component/movieList/Header";
 import MovieList from "./component/movieList/page";
+import TvShowList from "./component/tvShow/page";
+import UpComingList from "./component/upComing/page";
+import { getMovieResponse, getTvShowsResponse, getUpcomingResponse } from "./lib/api";
 
 export default async function Home() {
-    const API_KEY = process.env.NEXT_PUBLIC_API_KEY
-    const response = await fetch (`${process.env.NEXT_PUBLIC_API_POPULAR_URL}?api_key=${API_KEY}`)
-    const topMovie = await response.json()
+    const upComing = await getUpcomingResponse()
+    const topMovie = await getMovieResponse()
+    const tvShows = await getTvShowsResponse()
     
   return (
     
@@ -18,13 +21,13 @@ export default async function Home() {
       {/* UPCOMING */}
       <section className="mt-12 p-2">
       <Header title={"UPCOMING"} linkTitle={"See All"} linkHref={"/upcoming"}/>
-      <MovieList api= {topMovie}/>
+      <UpComingList api={upComing}/>
       </section>
 
       {/* TV SHOWS */}
       <section className="mt-12 p-2">
       <Header title={"TV SHOWS"} linkTitle={"See All"} linkHref={"/tvshows"}/>
-      <MovieList api= {topMovie}/>
+      <TvShowList api={tvShows}/>
       </section>
 
     </div>

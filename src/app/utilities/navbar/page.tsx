@@ -41,14 +41,11 @@ const Navbar = () => {
             <Link href="/movies" className="text-white hover:text-gray-300 transition-colors">
               Movies
             </Link>
-            <Link href="/tv-shows" className="text-white hover:text-gray-300 transition-colors">
+            <Link href="/tvShow" className="text-white hover:text-gray-300 transition-colors">
               TV Shows
             </Link>
             <Link href="/popular" className="text-white hover:text-gray-300 transition-colors">
               Popular
-            </Link>
-            <Link href="/my-list" className="text-white hover:text-gray-300 transition-colors">
-              My List
             </Link>
           </div>
 

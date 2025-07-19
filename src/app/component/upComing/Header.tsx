@@ -2,13 +2,13 @@ import React from 'react'
 import Link from 'next/link'
 
 
-interface tvTitleProps {
+interface upComingTitleProps {
     title : any
     linkHref : any
     linkTitle : any
 }
 
-const Header = ({title, linkHref, linkTitle}: tvTitleProps) => {
+const Header = ({title, linkHref, linkTitle}: upComingTitleProps) => {
   return (
     <div className='flex justify-between items-center p-4'>
     <h1 className="ml-29 mt-2 text-2xl font-bold text-white">{title}</h1>
