@@ -17,13 +17,13 @@ export default async function Home() {
 
       {/* UPCOMING */}
       <section className="mt-12 p-2">
-      <Header title={"UPCOMING"} linkTitle={"See All"} linkHref={"/popular"}/>
+      <Header title={"UPCOMING"} linkTitle={"See All"} linkHref={"/upcoming"}/>
       <MovieList api= {topMovie}/>
       </section>
 
       {/* TV SHOWS */}
       <section className="mt-12 p-2">
-      <Header title={"TV SHOWS"} linkTitle={"See All"} linkHref={"/popular"}/>
+      <Header title={"TV SHOWS"} linkTitle={"See All"} linkHref={"/tvshows"}/>
       <MovieList api= {topMovie}/>
       </section>
 

@@ -7,6 +7,7 @@ interface MovieListProps {
 }
 
 const MovieList = ({api} : MovieListProps) => {
+  const movies = Array.isArray(api) ? api : []
   console.log({api})
   return (
     <div className="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 " >      
