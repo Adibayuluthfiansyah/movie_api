@@ -19,3 +19,11 @@ export const getTvShowsResponse = async () => {
     return tvShows
 }
 
+export const getMovieMainResponse = async () => {
+    const API_KEY = process.env.NEXT_PUBLIC_API_KEY
+    const response = await fetch (`${process.env.NEXT_PUBLIC_API_MOVIE_LIST_URL}?api_key=${API_KEY}`)
+    const movieMain = await response.json()
+    return movieMain
+}
+
+

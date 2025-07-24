@@ -1,13 +1,15 @@
 import Header from "./component/movieList/Header";
 import MovieList from "./component/movieList/page";
+import MovieMainList from "./component/movieMain/page";
 import TvShowList from "./component/tvShow/page";
 import UpComingList from "./component/upComing/page";
-import { getMovieResponse, getTvShowsResponse, getUpcomingResponse } from "./lib/api";
+import { getMovieMainResponse, getMovieResponse, getTvShowsResponse, getUpcomingResponse } from "./lib/api";
 
 export default async function Home() {
     const upComing = await getUpcomingResponse()
     const topMovie = await getMovieResponse()
     const tvShows = await getTvShowsResponse()
+    const movieMain = await getMovieMainResponse()
     
   return (
     
@@ -16,6 +18,12 @@ export default async function Home() {
       <section className="mt-12 p-2">
       <Header title={"MOST POPULAR"} linkTitle={"See All"} linkHref={"/popular"}/>
       <MovieList api= {topMovie}/>
+      </section>
+
+      {/* MOVIE MAIN*/}
+      <section className="mt-12 p-2">
+      <Header title={"MOVIE"} linkTitle={"See All"} linkHref={"/movie-list"}/>
+      <MovieMainList api={movieMain}/>
       </section>
 
       {/* UPCOMING */}

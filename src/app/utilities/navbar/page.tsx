@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Search, User, Menu, X } from 'lucide-react';
+import { Search,  Menu, X } from 'lucide-react';
 import InputSearch from './InputSearch';
 
 const Navbar = () => {
@@ -26,7 +26,6 @@ const Navbar = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="text-red-600 text-2xl font-bold">
               70NGFLIX
@@ -38,10 +37,10 @@ const Navbar = () => {
             <Link href="/" className="text-white hover:text-gray-300 transition-colors">
               Home
             </Link>
-            <Link href="/movies" className="text-white hover:text-gray-300 transition-colors">
+            <Link href="/movie-list" className="text-white hover:text-gray-300 transition-colors">
               Movies
             </Link>
-            <Link href="/tvShow" className="text-white hover:text-gray-300 transition-colors">
+            <Link href="/tvshow-list" className="text-white hover:text-gray-300 transition-colors">
               TV Shows
             </Link>
             <Link href="/popular" className="text-white hover:text-gray-300 transition-colors">
