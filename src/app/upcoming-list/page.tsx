@@ -3,11 +3,11 @@
 import React, { useEffect, useState } from 'react'
 import HeaderMenu from '../utilities/HeaderMenu'
 import Pagination from '../utilities/Pagination'
-import MovieList from '../component/movieList/page'
+import UpComingList from '../component/upComing/page'
 
 const page = () => {
     const [currentPage, setCurrentPage] = useState(1)
-    const [topMovie, setTopMovie] = useState([])
+    const [upComing, setUpComing] = useState([])
     const [totalPages, setTotalPages] = useState(0)
     const [loading, setLoading] = useState(false)
 
@@ -15,10 +15,10 @@ const page = () => {
         try {
             setLoading(true)
             const API_KEY = process.env.NEXT_PUBLIC_API_KEY
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_POPULAR_URL}?api_key=${API_KEY}&page=${currentPage}`)
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_UPCOMING_URL}?api_key=${API_KEY}&page=${currentPage}`)
             const data = await response.json()
             
-            setTopMovie(data)
+            setUpComing(data)
             setTotalPages(data.total_pages)
             
         } catch (error) {
@@ -34,11 +34,11 @@ const page = () => {
 
     return (
         <div className='p-4 mt-15'>
-            <div><HeaderMenu title={"Popular Movie"}/></div>
+            <div><HeaderMenu title={"Up Coming"}/></div>
             {loading ? (
                 <div className="text-center">Loading .... </div>
             ) : (
-                <div><MovieList api={topMovie}/></div>
+                <div><UpComingList api ={upComing}/></div>
             )}
             <div>
                 <Pagination 

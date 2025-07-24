@@ -14,19 +14,19 @@ export default async function Home() {
     <div>
        {/* POPULAR MOVIE */}
       <section className="mt-12 p-2">
-      <Header title={"Most Popular"} linkTitle={"See All"} linkHref={"/popular"}/>
+      <Header title={"MOST POPULAR"} linkTitle={"See All"} linkHref={"/popular"}/>
       <MovieList api= {topMovie}/>
       </section>
 
       {/* UPCOMING */}
       <section className="mt-12 p-2">
-      <Header title={"UPCOMING"} linkTitle={"See All"} linkHref={"/upcoming"}/>
+      <Header title={"UPCOMING"} linkTitle={"See All"} linkHref={"/upcoming-list"}/>
       <UpComingList api={upComing}/>
       </section>
 
       {/* TV SHOWS */}
       <section className="mt-12 p-2">
-      <Header title={"TV SHOWS"} linkTitle={"See All"} linkHref={"/tvshows"}/>
+      <Header title={"TV SHOWS"} linkTitle={"See All"} linkHref={"/tvshow-list"}/>
       <TvShowList api={tvShows}/>
       </section>
 
