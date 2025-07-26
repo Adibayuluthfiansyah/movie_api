@@ -9,7 +9,7 @@ interface MovieDetailProps {
 }
 
 export default async function MovieDetail({ params }: MovieDetailProps) {
-  const { id } = params;
+  const { id } =  await params;
   
   try {
     const movieDetail = await getMovieDetailResponse(id);
@@ -51,7 +51,7 @@ export default async function MovieDetail({ params }: MovieDetailProps) {
                 <img
                   src={`${process.env.NEXT_PUBLIC_API_IMG_URL}${movieDetail.poster_path}`}
                   alt={movieDetail.title}
-                  className="w-64 h-96 object-cover rounded-lg shadow-2xl"
+                  className="w-64 h-95 object-cover rounded-lg shadow-2xl"
                 />
               </div>
               
