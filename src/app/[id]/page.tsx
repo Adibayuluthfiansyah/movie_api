@@ -56,7 +56,7 @@ export default async function MovieDetail({ params }: MovieDetailProps) {
               </div>
               
               {/* Movie Info */}
-              <div className="flex-1">
+              <div className="flex-2">
                 <h1 className="text-5xl font-bold mb-4">{movieDetail.title}</h1>
                 <div className="flex items-center gap-4 mb-4">
                   <span className="bg-yellow-500 text-black px-2 py-1 rounded text-sm font-bold">
