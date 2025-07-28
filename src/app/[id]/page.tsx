@@ -45,7 +45,7 @@ export default async function MovieDetail({ params }: MovieDetailProps) {
           }}
         >
           <div className="absolute inset-0 flex items-end p-8">
-            <div className="flex gap-8">
+            <div className="flex gap-9">
               {/* Poster */}
               <div className="flex-shrink-0">
                 <img
