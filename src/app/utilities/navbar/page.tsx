@@ -28,7 +28,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="text-red-600 text-2xl font-bold">
-              70NGFLIX
+              70NGMOV
             </Link>
           </div>
 
