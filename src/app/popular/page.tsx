@@ -36,7 +36,7 @@ const page = () => {
         <div className='p-4 mt-15'>
             <div><HeaderMenu title={"Popular Movie"}/></div>
             {loading ? (
-                <div className="text-center">Loading .... </div>
+                <div className="text-center">Loading ..... </div>
             ) : (
                 <div><MovieList api={topMovie}/></div>
             )}
