@@ -14,25 +14,21 @@ export default async function MovieDetail({ params }: MovieDetailProps) {
   try {
     const movieDetail = await getMovieDetailResponse(id);
     
-    // Check if movie exists
+
     if (!movieDetail || movieDetail.success === false) {
       notFound();
     }
 
-    // Get trailer video
     const trailer = movieDetail.videos?.results?.find(
       (video: any) => video.type === "Trailer" && video.site === "YouTube"
     );
 
-    // Get main cast (first 6 actors)
     const mainCast = movieDetail.credits?.cast?.slice(0, 6) || [];
 
-    // Get director
     const director = movieDetail.credits?.crew?.find(
       (person: any) => person.job === "Director"
     );
 
-    // Get recommendations (first 6)
     const recommendations = movieDetail.recommendations?.results?.slice(0, 6) || [];
 
     return (
