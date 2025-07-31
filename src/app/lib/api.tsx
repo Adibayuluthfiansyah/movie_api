@@ -26,7 +26,6 @@ export const getMovieMainResponse = async () => {
     return movieMain
 }
 
-// NEW: Get movie detail by ID
 export const getMovieDetailResponse = async (id:any) => {
     const API_KEY = process.env.NEXT_PUBLIC_API_KEY
     const response = await fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&append_to_response=credits,videos,recommendations`)
@@ -34,7 +33,6 @@ export const getMovieDetailResponse = async (id:any) => {
     return movieDetail
 }
 
-// NEW: Get TV show detail by ID
 export const getTvDetailResponse = async (id:any) => {
     const API_KEY = process.env.NEXT_PUBLIC_API_KEY
     const response = await fetch (`https://api.themoviedb.org/3/tv/${id}?api_key=${API_KEY}&append_to_response=credits,videos,recommendations`)
@@ -42,7 +40,6 @@ export const getTvDetailResponse = async (id:any) => {
     return tvDetail
 }
 
-// NEW: Search function
 export const getSearchResults = async (query:any) => {
     const API_KEY = process.env.NEXT_PUBLIC_API_KEY
     const response = await fetch (`${process.env.NEXT_PUBLIC_API_SEARCH_URL}?api_key=${API_KEY}&query=${query}`)

@@ -3,6 +3,7 @@ import MovieList from "./component/movieList/page";
 import MovieMainList from "./component/movieMain/page";
 import TvShowList from "./component/tvShow/page";
 import UpComingList from "./component/upComing/page";
+import MovieScroll from "./component/movieScroll/page";
 import { getMovieMainResponse, getMovieResponse, getTvShowsResponse, getUpcomingResponse } from "./lib/api";
 
 export default async function Home() {
@@ -12,13 +13,18 @@ export default async function Home() {
     const movieMain = await getMovieMainResponse()
     
   return (
-    
     <div>
-       {/* POPULAR MOVIE */}
+      {/* MOST POPULAR */}
+      <section className="mt-12 p-2">
+      <Header title={"MOST POPULAR"} linkTitle={"See All"} linkHref={"/popular"}/>
+      <MovieScroll api= {topMovie}/>
+      </section>
+
+      {/* POPULAR MOVIE
       <section className="mt-12 p-2">
       <Header title={"MOST POPULAR"} linkTitle={"See All"} linkHref={"/popular"}/>
       <MovieList api= {topMovie}/>
-      </section>
+      </section> */}
 
       {/* MOVIE MAIN*/}
       <section className="mt-12 p-2">
