@@ -20,12 +20,6 @@ export default async function Home() {
       <MovieScroll api= {topMovie}/>
       </section>
 
-      {/* POPULAR MOVIE
-      <section className="mt-12 p-2">
-      <Header title={"MOST POPULAR"} linkTitle={"See All"} linkHref={"/popular"}/>
-      <MovieList api= {topMovie}/>
-      </section> */}
-
       {/* MOVIE MAIN*/}
       <section className="mt-12 p-2">
       <Header title={"MOVIE"} linkTitle={"See All"} linkHref={"/movie-list"}/>
