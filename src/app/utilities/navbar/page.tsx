@@ -57,8 +57,6 @@ const Navbar = () => {
               <Search size={20} />
             </button>
 
-
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
