@@ -13,8 +13,9 @@ const UpComingList = ({api} : UpComingListProps) => {
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-7 gap-4" >      
     {api.results?.map ((movie:any) => {
       return (
-      <div key={movie.id} className=' gap-3 mb-3 p-3 justify-center items-center'>
+      <div key={movie.id} className='group'>
       <div className='items-center justify-center text-center'>
+        <div>
         <Link href={`/${movie.id}`}>
         <img src={`${process.env.NEXT_PUBLIC_API_IMG_URL}${movie.poster_path}`} 
         width={350} 
@@ -22,6 +23,7 @@ const UpComingList = ({api} : UpComingListProps) => {
         className='cursor-pointer'
         />
         </Link>
+        </div>
         <h1 className='mt-4'>{movie.title} </h1>
       </div>
     </div>
