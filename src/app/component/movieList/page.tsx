@@ -30,7 +30,7 @@ const MovieList = ({api} : MovieListProps) => {
             </div>
           </div>
           <h1 className="mt-4 text-center">{movie.title}</h1>
-          <p className="text-gray-400 text-xs">
+          <p className="text-gray-400 ">
           </p>
         </Link>
       </div>
