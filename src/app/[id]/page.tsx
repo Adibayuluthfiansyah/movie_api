@@ -128,7 +128,7 @@ export default async function MovieDetail({ params }: MovieDetailProps) {
                           : '/placeholder-person.jpg'
                       }
                       alt={actor.name}
-                      className="w-full h-48 object-cover rounded-lg mb-2"
+                      className="w-full h-48 object-cover rounded-lg mb-2 cursor-pointer"
                     />
                     <h3 className="font-semibold text-sm">{actor.name}</h3>
                     <p className="text-gray-400 text-xs">{actor.character}</p>
