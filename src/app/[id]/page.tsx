@@ -141,7 +141,7 @@ export default async function MovieDetail({ params }: MovieDetailProps) {
           {/* Movie Details */}
           <section className="mb-12">
             <h2 className="text-3xl font-bold mb-6">Details</h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-7">
               <div>
                 <div className="space-y-3">
                   <div>
