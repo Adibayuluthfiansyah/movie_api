@@ -205,7 +205,7 @@ export default async function MovieDetail({ params }: MovieDetailProps) {
                       </div>
                     </div>
                     <h3 className="mt-2 text-sm font-semibold truncate">{movie.title}</h3>
-                    <p className="text-gray-400 text-xs">
+                    <p className="text-gray-400 text-xs font-bold">
                       ⭐ {movie.vote_average?.toFixed(1)}
                     </p>
                   </Link>
