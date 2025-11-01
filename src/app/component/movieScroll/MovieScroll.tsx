@@ -9,7 +9,6 @@ interface MovieListProps {
 
 const MovieScroll = ({api} : MovieListProps) => {
 
-  console.log({api})
   return (
     <div className="flex gap-4 overflow-x-auto scrollbar-hide" >      
     {api.results?.map ((movie:any) => {
