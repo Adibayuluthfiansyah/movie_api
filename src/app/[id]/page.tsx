@@ -2,8 +2,12 @@ import { getMovieDetailResponse } from "../lib/api";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-// Re-push untuk perbaikan build error pada MovieDetail page
-export default async function MovieDetail({params}: {params:{id:string}}) {
+type Props = {
+  params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export default async function MovieDetail({ params }: Props) {
   const { id } =  await params;
   
   try {
