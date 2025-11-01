@@ -8,7 +8,6 @@ type Props = {
 };
 
 export default async function MovieDetail({ params }: Props) {
-  // FIX : DELETE 'await'
   const { id } = params;
   
   try {
