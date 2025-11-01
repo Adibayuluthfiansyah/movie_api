@@ -1,9 +1,9 @@
 import Header from "./component/movieList/Header";
-import MovieList from "./component/movieList/page";
-import MovieMainList from "./component/movieMain/page";
-import TvShowList from "./component/tvShow/page";
-import UpComingList from "./component/upComing/page";
-import MovieScroll from "./component/movieScroll/page";
+import MovieList from "./component/movieList/MovieList";
+import MovieMainList from "./component/movieMain/MovieMainList";
+import TvShowList from "./component/tvShow/TvShowList";
+import UpComingList from "./component/upComing/UpComingList";
+import MovieScroll from "./component/movieScroll/MovieScroll";
 import { getMovieMainResponse, getMovieResponse, getTvShowsResponse, getUpcomingResponse } from "./lib/api";
 
 export default async function Home() {

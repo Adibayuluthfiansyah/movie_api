@@ -1,5 +1,5 @@
 import React from 'react'
-import MovieList from '../../component/movieList/page'
+import MovieList from '../../component/movieList/MovieList'
 interface SearchPageProps {
     params : {
         keyword : string

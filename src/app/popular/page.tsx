@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import HeaderMenu from '../utilities/HeaderMenu'
 import Pagination from '../utilities/Pagination'
-import MovieList from '../component/movieList/page'
+import MovieList from '../component/movieList/MovieList'
 
 const page = () => {
     const [currentPage, setCurrentPage] = useState(1)
