@@ -2,13 +2,13 @@ import { getMovieDetailResponse } from "../lib/api";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-interface MovieDetailProps {
-  params: {
-    id: string;
-  };
-}
+// interface MovieDetailProps {
+//   params: { 
+//     id: string;
+//   };
+// }
 
-export default async function MovieDetail({ params }: MovieDetailProps) {
+export default async function MovieDetail({ params }: { params: { id: string } }) {
   const { id } =  await params;
   
   try {
