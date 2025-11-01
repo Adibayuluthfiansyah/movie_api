@@ -2,12 +2,13 @@ import { getMovieDetailResponse } from "../lib/api";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-// type Props = {
-//   params: { id: string };
-//   searchParams: { [key: string]: string | string[] | undefined };
-// };
+type Props = {
+  params: Promise<{ id: string }>;
+  searchParams: { [key: string]: string | string[] | undefined };
+};
 
-export default async function MovieDetail({params,}: {params: { id: string };searchParams?: { [key: string]: string | string[] | undefined };}) {const { id } =  await params;
+export default async function MovieDetail({ params }: Props) {
+  const { id } =  await params;
   
   try {
     const movieDetail = await getMovieDetailResponse(id);
