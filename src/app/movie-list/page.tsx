@@ -5,7 +5,7 @@ import HeaderMenu from '../utilities/HeaderMenu'
 import Pagination from '../utilities/Pagination'
 import MovieMainList from '../component/movieMain/page'
 
-const page = () => {
+const MovieListPage = () => { 
     const [currentPage, setCurrentPage] = useState(1)
     const [movieMain, setMovieMain] = useState([])
     const [totalPages, setTotalPages] = useState(0)
@@ -51,4 +51,4 @@ const page = () => {
     )
 }
 
-export default page
+export default MovieListPage
