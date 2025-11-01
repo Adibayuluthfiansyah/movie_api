@@ -7,8 +7,13 @@ type Props = {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
-export default async function MovieDetail({ params, searchParams }: Props) {
-  const { id } =  await params;
+export default async function MovieDetail({
+  params,
+}: {
+  params: { id: string };
+  searchParams?: { [key: string]: string | string[] | undefined };
+}) {
+  const { id } = params;
   
   try {
     const movieDetail = await getMovieDetailResponse(id);
