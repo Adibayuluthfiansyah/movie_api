@@ -1,0 +1,42 @@
+version: "3.8"
+
+services:
+  # --- 1. Lingkungan DEVELOPMENT ---
+  # Jalankan dengan: docker-compose up dev
+  dev:
+    container_name: 70ngmov-dev
+    build:
+      context: .
+      dockerfile: Dockerfile.dev # Menggunakan resep 'dev'
+    ports:
+      - "3000:3000" # Akses di localhost:3000
+    volumes:
+      - .:/app # Hubungkan kode untuk hot-reloading
+      - /app/node_modules
+    env_file:
+      - .env # Gunakan file .env utama
+
+  # --- 2. Lingkungan STAGING ---
+  # Jalankan dengan: docker-compose up staging
+  staging:
+    container_name: 70ngmov-staging
+    build:
+      context: .
+      dockerfile: Dockerfile.prod # Menggunakan resep 'prod'
+    ports:
+      - "8080:3000" # Akses di localhost:8080 (agar tidak bentrok)
+    # TIDAK ADA 'volumes' kode, karena kita menguji build
+    env_file:
+      - .env.staging # Gunakan file .env staging
+
+  # --- 3. Lingkungan PRODUCTION ---
+  # Jalankan dengan: docker-compose up prod
+  prod:
+    container_name: 70ngmov-prod
+    build:
+      context: .
+      dockerfile: Dockerfile.prod # Menggunakan resep 'prod'
+    ports:
+      - "8888:3000" # Akses di localhost:8888 (atau port lain)
+    env_file:
+      - .env # Gunakan file .env utama (atau .env.prod)
